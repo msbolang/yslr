@@ -1,26 +1,3 @@
-# LuLu CMS2
-1、LuLu CMS 2
-
-one powerful and modularity CMS. based on Yii2
-
-
-
-2、在线演示Live Demo
-
-frontend: http://www.lulucms.com/
-
-backend(demo/demo): http://www.lulucms.com/admin.php
-
-
-
-3、安装:
-
-1)、先下载 lulucms2
-
-2)、然后新建数据库
-
-3)、然后通过web打开lulucms根据提示安装即可
-
 
 4、Note:
 
@@ -46,8 +23,5 @@ update:post|更新(POST)——代表可执行action为update的post方法，不�
 
 使用规则：选择“对控制器中Action判断” 即可
 
-【二】、给角色设置权限。
-
-把刚刚在【一】里面添加的权限赋值为相应的角色后就可以在后台访问了。
 
 
