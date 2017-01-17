@@ -12,6 +12,7 @@ if($AppLan=='en'){
   $this->title = 'INDEX';
   $usr_reg = 'register';
   $usr_login = 'login';
+  $usr_logout = 'logout';
 }else{
     $title = $this->getConfigValue('sys_seo_title');
     if(empty($title))
@@ -22,7 +23,7 @@ if($AppLan=='en'){
       $sys_seo_description = $this->getConfigValue('sys_seo_description');
       $usr_reg = '注册';
       $usr_login = '登陆';
-}
+}     $usr_logout = '退出';
 
 
 
@@ -155,8 +156,11 @@ if($AppLan=='en'){
             <a href="<?php echo Yii::$app->urlManager->createUrl(['/site/language','lang'=>'zh_cn']);?>">中文</a>  
             <a href="<?php echo Yii::$app->urlManager->createUrl(['/site/language','lang'=>'en']);?>">English</a>  
    
-            <a href="<?php echo Yii::$app->urlManager->createUrl(['/site/language','lang'=>'en']);?>"><?php echo $usr_reg ?></a>  
-            <a href="<?php echo Yii::$app->urlManager->createUrl(['/site/login','lang'=>'en']);?>"><?php echo $usr_login ?></a>  
+            <a href="<?php echo Yii::$app->urlManager->createUrl(['/site/language','lang'=>$AppLan]);?>"><?php echo $usr_reg ?></a>  
+            
+            
+            <a href="<?php echo Yii::$app->urlManager->createUrl(['/site/login','lang'=>$AppLan]);?>"><?php echo $usr_login ?></a> 
+                 <a href="<?php echo Yii::$app->urlManager->createUrl(['/site/logout','lang'=>$AppLan]);?>"><?php echo $usr_logout ?></a> 
         <header class="motopress-wrapper header">
             <div class="container">
                 <div class="row">

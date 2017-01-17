@@ -22,7 +22,7 @@ use source\libs\Constants;
 class User extends \source\core\base\BaseActiveRecord  implements \yii\web\IdentityInterface
 {
 	public $password;
-	
+	public $rememberMe;
     /**
      * @inheritdoc
      */
@@ -38,7 +38,7 @@ class User extends \source\core\base\BaseActiveRecord  implements \yii\web\Ident
     {
         return [
             [['username', 'auth_key', 'password_hash', 'email','role'], 'required'],
-            [['username','email'],'unique'],
+            [['username','email'],'unique','on'=>['register','create']],
             [['password'], 'required','on'=>['login','create']],
             [['status', 'created_at', 'updated_at'], 'integer'],
             ['email','email'],

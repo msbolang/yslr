@@ -35,6 +35,6 @@ if($siteStatus === '0')
 }
 
 
-$app->language = isset(\Yii::$app->session['language']) ? \Yii::$app->session['language'] : 'zh_cn';
+$app->language = isset(\Yii::$app->session['language']) ? \Yii::$app->session['language'] : 'zh_CN';
 
 $app->run();

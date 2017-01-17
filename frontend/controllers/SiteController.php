@@ -27,8 +27,10 @@ class SiteController extends FrontController
         {
             return $this->goHome();
         }
+        
         $model = new User();
         $model->scenario = 'login';
+     //   var_dump(\Yii::$app->user->isGuest);
         if ($model->load(Yii::$app->request->post()) && $model->login())
         {
             return $this->goBack();

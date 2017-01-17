@@ -7,9 +7,9 @@ $db = require(__DIR__ . '/db.php');
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'runtimePath'  => dirname(dirname(__DIR__)) . '/data/runtime',
-    
+   
     'components' => [
-        'cache' => [
+            'cache' => [
             'class' => 'yii\caching\FileCache',
             'cachePath'=>'@data/cache',
         ],
